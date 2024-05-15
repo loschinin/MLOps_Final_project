@@ -16,10 +16,16 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Create virtual environment
+        run: python3.11 -m venv myenv
+
+      - name: Activate virtual environment
+        run: source myenv/bin/activate
+
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: '3.x'
+          python-version: '3.11'
 
       - name: Upgrade setuptools
         run: python -m pip install --upgrade setuptools
