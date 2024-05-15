@@ -27,7 +27,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run tests
-        run:./test.sh
+        run: ./test.sh
 
       - name: Lint with flake8
         run: |
@@ -40,7 +40,7 @@ jobs:
         run: pytest
 
       - name: Build application
-        run:./build.sh
+        run: ./build.sh
 
       - name: Deploy
         run: echo "Deploy commands go here"
