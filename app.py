@@ -6,8 +6,8 @@ import numpy as np
 app = Flask(__name__)
 
 # Загрузка модели и StandardScaler с использованием joblib
-model = joblib.load('/Users/alex/Desktop/Studies/MLOps_course/final/selected_gradient_boosting_regressor.pkl')
-scaler = joblib.load('/Users/alex/Desktop/Studies/MLOps_course/final/selected_standard_scaler.pkl')
+model = joblib.load('./selected_gradient_boosting_regressor.pkl')
+scaler = joblib.load('./selected_standard_scaler.pkl')
 
 # Маршрут для главной страницы, возвращает HTML-форму для ввода данных
 @app.route('/')

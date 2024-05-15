@@ -4,26 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Прогнозирование стоимости недвижимости</title>
+    <!-- Подключение Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Подключение jQuery и Bootstrap JS (необходимо для некоторых компонентов Bootstrap) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
 </head>
-<body>
+<body style="display: flex; justify-content: center; padding: 16px">
+<div style="max-width: 800px">
     <h2>Прогнозирование стоимости недвижимости</h2>
     <form action="/predict" method="post">
-        <label for="crim">CRIM (Уровень преступности на душу населения):</label><br>
-        <input type="text" id="crim" name="crim"><br>
-        <label for="rm">RM (Среднее количество комнат):</label><br>
-        <input type="text" id="rm" name="rm"><br>
-        <label for="age">AGE (Доля домов, построенных до 1940 г., занимаемых владельцами):</label><br>
-        <input type="text" id="age" name="age"><br>
-        <label for="dis">DIS (Взвешенное расстояние до центров занятости):</label><br>
-        <input type="text" id="dis" name="dis"><br>
-        <label for="lstat">LSTAT (% населения с низким социальным статусом):</label><br>
-        <input type="text" id="lstat" name="lstat"><br>
-        <label for="nox">NOX (Концентрация оксидов азота):</label><br>
-        <input type="text" id="nox" name="nox"><br>
-        <button type="submit">Предсказать</button>
+        <div class="form-group">
+            <label for="crim">CRIM (Уровень преступности на душу населения):</label>
+            <input type="text" class="form-control" id="crim" name="crim" required>
+        </div>
+
+        <div class="form-group">
+            <label for="rm">RM (Среднее количество комнат):</label>
+            <input type="text" class="form-control" id="rm" name="rm" required>
+        </div>
+        <div class="form-group">
+            <label for="age">AGE (Доля домов, построенных до 1940 г., занимаемых владельцами):</label>
+            <input type="text" class="form-control" id="age" name="age" required>
+        </div>
+        <div class="form-group">
+            <label for="dis">DIS (Взвешенное расстояние до центров занятости):</label>
+            <input type="text" class="form-control" id="dis" name="dis" required>
+        </div>
+        <div class="form-group">
+            <label for="lstat">LSTAT (% населения с низким социальным статусом):</label>
+            <input type="text" class="form-control" id="lstat" name="lstat" required>
+        </div>
+        <div class="form-group">
+            <label for="nox">NOX (Концентрация оксидов азота):</label>
+            <input type="text" class="form-control" id="nox" name="nox" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Предсказать</button>
     </form>
+    <hr/>
     {% if prediction_text %}
         <h3>{{ prediction_text }}</h3>
     {% endif %}
+</div>
 </body>
 </html>
