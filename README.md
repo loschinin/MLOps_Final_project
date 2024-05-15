@@ -1,13 +1,13 @@
 # MLOps_Final_project
 MLOps. Final Project (vo_PJ) 2 semester
 
-### Создание виртуального окружения
+### Creating environment
 python3 -m venv myenv
 
-### Активация виртуального окружения на MacOS/Linux
+### Environment activation MacOS/Linux
 source myenv/bin/activate
 
-### Установка зависимостей
+### Install deps
 pip install -r requirements.txt
 pip install --upgrade pip
 
