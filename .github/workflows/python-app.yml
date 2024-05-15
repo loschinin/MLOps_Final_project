@@ -23,8 +23,8 @@ jobs:
 
       - name: Check for distutils and install if necessary
         run: |
-          if! command -v distutils &> /dev/null; then
-            sudo apt-get update && sudo apt-get install -y python3-distutils
+          if! command -v distutils >/dev/null 2>&1; then
+              sudo apt-get update && sudo apt-get install -y python3-distutils
           fi
         shell: bash
 
