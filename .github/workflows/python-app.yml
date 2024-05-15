@@ -17,7 +17,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Create virtual environment
-        run: python3.11 -m venv myenv
+        run: python3 -m venv myenv
 
       - name: Activate virtual environment
         run: source myenv/bin/activate
