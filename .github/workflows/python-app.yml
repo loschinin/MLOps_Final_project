@@ -42,17 +42,6 @@ jobs:
       - name: Test with pytest
         run: pytest
 
-      - name: Change permissions of build script
-        run: chmod +x ./build.sh
-
-      - name: Build application
-        run: ./build.sh
-
-      - name: Deploy
-        run: echo "Deploy commands go here"
-        env:
-          DEPLOY_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
-
 # Добавляем шаг для сборки и отправки Docker образа
       - name: Checkout code
         uses: actions/checkout@v2
