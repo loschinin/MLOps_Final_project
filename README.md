@@ -18,27 +18,21 @@ MLOps. Final Project (vo_PJ) 2 semester
 
 ### Шаги установки
 
-1. Склонируйте этот репозиторий:
 
-    ```sh
-    git clone https://github.com/ваш_пользователь/flask-prediction-app.git
-    cd flask-prediction-app
-    ```
-
-2. Убедитесь, что у вас есть следующие файлы в корне проекта:
+1. Убедитесь, что у вас есть следующие файлы в корне проекта:
     - `app.py` - основной файл приложения Flask.
     - `requirements.txt` - файл с зависимостями.
     - `selected_gradient_boosting_regressor.pkl` - модель для предсказаний.
     - `selected_standard_scaler.pkl` - скейлер для предобработки данных.
     - `templates/index.html` - HTML-шаблон для формы ввода.
 
-3. Соберите Docker образ:
+2. Соберите Docker образ:
 
     ```sh
     docker build -t flask-prediction-app .
     ```
 
-4. Запустите Docker контейнер:
+3. Запустите Docker контейнер:
 
     ```sh
     docker run -p 5000:5000 flask-prediction-app
