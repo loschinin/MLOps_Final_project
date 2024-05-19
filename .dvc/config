@@ -1,0 +1,9 @@
+[core]
+    remote = mlops_final_project
+    autostage = true
+['remote "myremote"']
+    url = gdrive://19x6V3UPdJ8bN5H8EvagGMvdR02e-zYSf
+['remote "myremote_fp"']
+    url = gdrive://19x6V3UPdJ8bN5H8EvagGMvdR02e-zYSf
+['remote "mlops_final_project"']
+    url = gdrive://17qUI9bU77qEMFZ0Y0gUMHTutcF2HuTUB
