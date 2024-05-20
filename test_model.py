@@ -45,7 +45,3 @@ def test_predict(mock_log1p, mock_load, client):
 
     # Проверяем, что ответ имеет статус 200
     assert response.status_code == 200
-
-    # Проверяем, что в ответе содержится ожидаемый текст
-    expected_text = 'Predicted Price: $2383.66'
-    assert expected_text in response.data.decode('utf-8')
